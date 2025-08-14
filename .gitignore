@@ -1,0 +1,4 @@
+# each line in this file tells git what file name to completely ignore
+# we want to ignore pycache files 
+
+__pycache__

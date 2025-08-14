@@ -1,0 +1,13 @@
+Item Class:
+    -weight attribute (can you pick it up? / overincumberance)
+    -size - does it fit in the converter? otherwise you need to break it down into smaller pieces
+
+NPCs:
+    -how invested is the customer in caring?
+    -escalate situation depending on what they see/encounter
+    -customer/staff/cops/A51
+
+-consume() / use() in player Class
+-if we want to sprinkle in unique per-item actions, we can add them on to the consume() method in player with conditionals.
+-if this gets too long / we realize we want more per-item complexity, consider a custom eat method for each item (time consuming! but bespoke) 
+
