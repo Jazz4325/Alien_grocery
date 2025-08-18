@@ -6,7 +6,7 @@ class Department():
         self.name = name
         self.stock = stock
 
-    # we are not initing items here, we are only making a blueprint of what can/cannot be in a specific department when IT is inited
+    # we are not initing all items here, we are only making a blueprint of what can/cannot be in a specific department when IT is inited
     
     # method to add_stock / restock? / update_stock once department is already inited
     

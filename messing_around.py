@@ -1,3 +1,5 @@
+#JUST MESSIN AROUND
+'''
 from items import Edible
 
 class Interactable:
@@ -51,3 +53,4 @@ for nutrient in item.nutrients:
 
 for nutrient in item.nutrients.keys():
     amount = item.nutrients[nutrient]
+'''

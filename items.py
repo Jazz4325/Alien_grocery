@@ -120,9 +120,6 @@ class Alcohol(Drink):
     
     ABV = 0.0
 
-    def get_drunk(self, item):
-        pass
-
 # ---------------------------- INEDIBLE ----------------------------
 
 class Inedible(Item):
@@ -160,15 +157,12 @@ class Stationary(Inedible):
 
 class Machine(Item):
     
-    def turn_on(item):
+    def turn_on(self, item):
         pass
 
-    def turn_off(item):
+    def turn_off(self, item):
         pass
 
-    def tamper(item):
-        pass
-        
         # -------------- customer facing --------------
 
 class CustomerFacing(Machine):
@@ -218,20 +212,20 @@ class Ranged(Weapon):
     Range = 0
     Ammo = 0
 
-    def shoot(item):
+    def shoot(self, item):
         pass
 
-    def point_at(item):
+    def point_at(self, item):
         pass
 
         # -------------- melee --------------
 
 class Melee(Weapon):
     
-    def swing(item):
+    def swing(self, item):
         pass
 
-    def brandish(item):
+    def brandish(self, item):
         pass
 
     # -------------- armor --------------
