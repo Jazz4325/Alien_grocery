@@ -11,7 +11,7 @@ class Item:
 
     def __str__(self):  
         
-        # Format string and show subclass (MRO = Method Resolution Order)
+        # debugging print (MRO = Method Resolution Order)
         class_hierarchy = type(self).mro()[1:-1]
         category = next((cls.__name__ for cls in class_hierarchy if cls.__name__ != "Item"), "Uncategorized")
 
