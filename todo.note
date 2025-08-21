@@ -1,0 +1,52 @@
+The Nutrition Data Problem:
+- every single food item has a massive nutrition dictionary
+Repetitive - You're typing the same keys 50+ times
+Error-prone - Easy to typo "Cholesterol" or miss a key
+Hard to maintain - Want to add "Vitamin C"? You need to edit every single class
+Inconsistent - Some use "(mg)", others "(%DV)" - hard to catch mistakes
+Verbose - Most values are 0, but you're writing them all out
+
+Needed: Template Pattern
+
+example:
+
+# Define the standard nutrition template once
+
+STANDARD_NUTRITION = {
+    "Fat (g)": 0,
+    "Cholesterol (mg)": 0,
+    "Sodium (mg)": 0,
+    "Carbohydrate (g)": 0,
+    "Dietary Fiber (g)": 0,
+    "Sugar (g)": 0,
+    "Protein (g)": 0,
+    "Iron (% DV)": 0,
+    "Vitamin D (% DV)": 0,
+    "Calcium (% DV)": 0,
+}
+
+class BeefJerky(Snack):
+    def __init__(self):
+        super().__init__()
+        
+        # Start with template, then override specific values
+        
+        self.nutrition = STANDARD_NUTRITION.copy()
+        self.nutrition.update({
+            "Fat (g)": 1.5,
+            "Cholesterol (mg)": 40,
+            "Sodium (mg)": 740,
+            "Carbohydrate (g)": 6,
+            "Sugar (g)": 5,
+            "Protein (g)": 15,
+            "Iron (% DV)": 8,
+        })
+        
+        # No need to specify the zeros!
+
+Lines of code per item: ~5-8 lines for nutrition
+Total nutrition lines: ~10 lines for template + ~100 for overrides
+Maintenance: Change template once = affects all items
+
+
+The key insight: Don't repeat information that's mostly the same - create a default and only specify the differences!

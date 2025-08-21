@@ -136,15 +136,15 @@ class EarlGrey(CoffeeTea):
 
 class Gatorade(SportsDrink):
    
-    name = "Cup of Earl Grey Tea"
+    name = "Gatorade"
     material = {
         "plastic" : 20, 
         }
     nutrition = {
         "Fat (g)" : 0,
         "Cholesterol (mg)" : 0,
-        "Sodium (mg)" : 0,
-        "Carbohydrate (g)" : 0,
+        "Sodium (mg)" : 270,
+        "Carbohydrate (g)" : 1,
         "Dietary Fiber (g)" : 0,
         "Sugar (g)" : 0,
         "Protein (g)" : 0,
@@ -152,8 +152,8 @@ class Gatorade(SportsDrink):
         "Vitamin D (mcg)" : 0,
         "Calcium (mg)" : 0,
         }
-    value = 0.99
-    description = "Relax and take of sip of this piping hot beverage. Devoid of any nutrition, only sophisticated individuals enjoy this bitter drink."
+    value = 2.99
+    description = "Get back in the game with a drink engineered for sporting recovery."
 
 # ---------------------------- INEDIBLE ----------------------------
 

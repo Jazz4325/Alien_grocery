@@ -21,11 +21,23 @@ class Department():
         par_quantity = self.par[item_class_name]
         self.stock[item_class_name] = par_quantity
         
-        """ restock specific subclasses
-        for item_class_name in self.par:
-            if isinstance(item_class_name, Edible):
-                restock
+        """ 
+        -Restock item by subclass
+        def restock_specific_item(self, item_class_name):
+            for item_class_name in self.par:
+                if isinstance(item_class_name, Edible):
+                    restock_item(self, item_class_name)
+        
+        -Subclass-weighted restock (difficulty modifier)
+        def restock_by_category(self, category: type[Item], fraction: float = 1.0) -> None:
+            for item_class in self.par:
+            if issubclass(item_class, category):
+                self.stock[item_class] = int(self.par[item_class] * fraction)
+        Example:
+        restock_by_category(Drink, 1.0) (lots of drinks)
+        restock_by_category(Snack, 0.25) (few snacks)
         """
+
 
     # can the dept ever carry this item?
     def carries_item(self, item_class_name) -> bool: # type annotation!

@@ -6,7 +6,7 @@ class Item:
 
     def __init__(self):
         self.name = self.name
-        self.material = self.material
+        self.material = self.material = self.material.copy() # make a new instance of the materials or they're all shared - overriding each other
         self.description = self.description
 
     def __str__(self):  
